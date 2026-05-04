@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CarMatcher — Find Your Perfect Drive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- GRAIN OVERLAY -->
+  <div class="grain"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="masthead">
+        <span class="masthead-issue">Vol. 1 · 2026</span>
+        <h1 class="masthead-title">CarMatcher</h1>
+        <span class="masthead-tagline">The Automotive Intelligence Review</span>
+      </div>
+      <nav class="header-nav">
+        <a href="#">About</a>
+        <a href="#">How It Works</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="header-rule">
+      <span></span><span class="rule-diamond">◆</span><span></span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">AI-POWERED · INSTANT RECOMMENDATIONS</div>
+    <h2 class="hero-headline">
+      Describe your<br/><em>ideal car.</em><br/>We'll find it.
+    </h2>
+    <p class="hero-sub">Tell us how you drive, what you value, and what you've always wanted. Our editorial engine does the rest.</p>
+  </section>
+
+  <!-- MAIN FORM -->
+  <main class="main-content">
+    <div class="form-card">
+      <div class="form-card-label">YOUR BRIEF</div>
+      <textarea
+        id="userPrompt"
+        placeholder="e.g. I want something sporty but comfortable for long highway trips, under $40k, reliable enough for a first-time buyer, ideally with a manual option…"
+        rows="5"
+      ></textarea>
+
+      <div class="form-footer">
+        <div class="form-hint">Be as specific or as vague as you like — the more detail, the sharper the match.</div>
+        <button id="matchBtn" onclick="findMatches()">
+          <span class="btn-text">Find My Match</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="loading" id="loading">
+      <div class="loading-spinner"></div>
+      <p>Our editors are reviewing your brief…</p>
+    </div>
+
+    <!-- RESULTS -->
+    <section class="results" id="results"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-rule">
+      <span></span><span class="rule-diamond">◆</span><span></span>
+    </div>
+    <p class="footer-copy">CarMatcher © 2026 · Powered by Google Gemini AI · All recommendations for informational purposes only</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
