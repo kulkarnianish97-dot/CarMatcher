@@ -31,6 +31,8 @@ Be specific with trim levels when it matters. Be honest about trade-offs.
 `.trim();
 }
 
+const key = CARMATCHER_CONFIG.GEMINI_API_KEY || document.getElementById('apiKey').value.trim();
+
 // ── Call Gemini API ───────────────────────────────────────
 async function callGemini(userInput) {
   if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY === "YOUR_GEMINI_API_KEY_HERE") {
